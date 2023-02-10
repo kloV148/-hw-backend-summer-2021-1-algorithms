@@ -4,9 +4,13 @@ __all__ = (
 
 
 def even_odd(arr: list[int]) -> float:
-    """
-    Функция возвращает отношение суммы четных элементов массив к сумме нечетных
-    Пример:
-    even_odd([1, 2, 3, 4, 5]) == 0.8889
-    """
-    raise NotImplementedError
+    odd_summ = 0
+    even_summ = 0
+    for i in arr:
+        if i%2 == 1:
+            odd_summ += i
+        else:
+            even_summ+=i
+    if odd_summ!=0: return even_summ/odd_summ
+    else:
+        return 0
